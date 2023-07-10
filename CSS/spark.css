@@ -1,0 +1,31 @@
+.SparkleDiv {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+}
+
+
+.Sparkle{
+  position: relative;
+  animation: translate infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  pointer-events: none;
+  z-index: -100;
+  
+}
+
+@keyframes translate {
+  from{
+    transform: translateX(0vh);
+    opacity: 1;
+  }
+
+  to{
+    transform: translateX(100vh);
+    
+
+    opacity: 0;
+  }
+}
+

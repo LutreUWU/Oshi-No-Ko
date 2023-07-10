@@ -1,0 +1,199 @@
+
+
+
+
+
+.allCharacter{
+  
+  width: 98%;
+  height: 95%;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.TitleCharacter{
+  width: fit-content;
+  padding: 5px 40px; 
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:  10px;
+  color: white;
+  letter-spacing: 1px;
+  background-color: #9a00ac;
+  border-radius: 30px;
+  
+  
+  font-weight: bold;
+  text-shadow: 0 0 10px black;
+}
+
+
+.CharacterDiv{
+  height: 100%;
+  min-width: 100%;
+}
+
+.CharacterProfile{
+  margin-top: 10px;
+}
+
+
+.Character{
+  
+  width: 80%;
+  
+  margin:auto;
+ position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CharacterImage{
+  width: 80%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.7);
+  border-radius: 50%;
+  border: 10px solid var(--clr);
+}
+
+.CharacterName{
+  position: absolute;
+  top: 0px;
+  color: whitesmoke;
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 5px black;
+  font-weight: bold;
+ 
+}
+
+.citation{
+  
+  display: flex;
+  
+  margin: auto;
+  color: white;
+  width: 90%;
+  text-align: center;
+}
+
+
+.citation span{
+  margin-top: 5%;
+  text-align: center;
+}
+.citation :nth-child(1){
+  color: var(--clr);
+  font-weight: bold;
+  margin-right:10px ;
+  font-size: 1.5rem;
+}
+
+.citation :nth-child(2){
+ font-style: italic;
+  color: rgb(199, 190, 190);
+ }
+
+ .citation :nth-child(3){
+  color: var(--clr);
+  font-weight: bold;
+  margin-left:10px ;
+  font-size: 1.5rem;
+}
+
+.CharacterText{
+  color: white;
+  text-align: center;
+  margin: 10px;
+  font-family: Roboto;
+  font-size: 0.9rem;
+}
+
+.arrowDiv{
+  
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 5%;
+  z-index: 99;
+  
+}
+
+.rightArrow,
+.leftArrow{
+  position: relative;
+  font-size: 2em;
+  border-radius: 50%;
+  border: 2px solid whitesmoke;
+  padding: 0 10px;
+  color: grey;
+  font-weight: bold;
+  margin: 0px 1%;
+  transition: all 0.2s;
+}
+
+.rightArrow:hover,
+.leftArrow:hover{
+  background-color: #444;
+  color: white;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}
+
+.leftArrow::before,
+.rightArrow::before{
+  content:"Prochain personnage";
+  background-color: grey;
+  color: rgb(36, 34, 34);
+  position: absolute;
+  width: 85px;
+  top: -35px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 0.8rem;
+  border-radius: 15px;
+  opacity: 0;
+text-align: center;
+  transition: opacity 0.5s;
+}
+
+.leftArrow::before{
+  content: "Personnage Précédent";
+}
+
+.leftArrow:hover::before,
+.rightArrow:hover::before{
+  opacity: 1;
+}
+
+@media (min-width: 640px)  {
+  .CharacterDiv{
+    display: flex;
+    
+  }
+  
+  .CharacterProfile{
+    font-size: 1.2rem;
+    flex-basis: 50%;
+   
+  }
+
+  .CharacterText{
+    
+    font-size: 1.1rem;
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 1600px)  {
+  .CharacterImage{
+    width: 60%;
+  }
+}

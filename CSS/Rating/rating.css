@@ -1,0 +1,151 @@
+.ratingDiv{
+  width: 90%;
+  height: 95%;
+  
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+ 
+}
+
+.ratingDiv p{
+  color: white;
+  font-family: Roboto;
+  
+  
+}
+.TitleRating{
+  width: fit-content;
+  padding: 5px 40px; 
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:  10px;
+  color: white;
+  letter-spacing: 1px;
+  background-color: #9a00ac;
+  border-radius: 30px;
+  
+  
+  font-weight: bold;
+  text-shadow: 0 0 10px black;
+}
+
+.RatingText{
+  width: 100%;
+ padding-bottom: 50px;
+}
+
+
+
+.RateDivImage{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+  
+}
+
+.RateImage{
+  width: 48%;
+  height: fit-content;
+  object-fit: cover ;
+  object-position: top;
+  border-radius: 15px;
+  border: solid 2px #9a00ac ;
+}
+
+.edDiv,
+.opDiv{
+  width: 90%;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.edTitle,
+.opTitle{
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.edYoutube,
+.opYoutube{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.opDiv:hover .RateImage{
+ filter: brightness(0.3);
+ cursor: pointer;
+
+}
+
+.opDiv:hover .opTitle{
+  opacity: 1;
+}
+
+.opDiv:hover .opYoutube{
+  opacity: 1;
+}
+
+.edDiv:hover .RateImage{
+  filter: brightness(0.3);
+  cursor: pointer;
+ 
+ }
+ 
+ .edDiv:hover .edTitle{
+   opacity: 1;
+ }
+ 
+ .edDiv:hover .edYoutube{
+   opacity: 1;
+ }
+
+ @media (min-width: 1000px)  {
+
+  .ratingDiv p{
+    font-size: 1.2em
+  }
+
+  
+  
+  .RatingText{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5%;
+    height: 75%;
+   
+  }
+
+  .pTwo{
+    margin-bottom: auto; /* La marge supérieure automatique poussera la div enfant vers le bas */
+    align-self: flex-start;
+    
+    
+  }
+
+  .pThree{
+
+    align-self: center;
+    
+  }
+
+  .pFour{
+    
+    align-self: flex-end;
+   
+    
+  }
+}
+
